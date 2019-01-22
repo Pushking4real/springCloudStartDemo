@@ -1,0 +1,3 @@
+com\abchina\feigncluster\ConsumerController.class
+com\abchina\services\EdgeServices.class
+com\abchina\feigncluster\FeignClusterApplication.class

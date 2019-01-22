@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: base-microservice
+
+eureka:
+  client:
+    security:
+         basic:
+            user: admin
+            password: abcdc123  
+    serviceUrl:
+         defaultZone: http://${eureka.client.security.basic.user}:${eureka.client.security.basic.password}@localhost:8761/eureka,http://${eureka.client.security.basic.user}:${eureka.client.security.basic.password}@localhost:8762/eureka
+    instance:
+         instanceId: ${spring.cloud.client.ip-address}:${spring.application.name}:${server.port}
